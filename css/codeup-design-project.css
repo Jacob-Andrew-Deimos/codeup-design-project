@@ -32,8 +32,7 @@ main {
         " big1 big1 big1 big1 big1"
         " big2 big2 big2 big2 big2"
         ". selected selected selected ."
-        "ipad ipad ipad ipad ipad"
-        " featured featured featured circles circles";
+        " pic1 pic1 pic1 pic1 pic1"
 
 }
 #banner {
@@ -54,6 +53,9 @@ main {
 #list {
     grid-area: list;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #visual {
     width: 100%;
@@ -104,53 +106,112 @@ main {
     grid-area: selected;
     margin-top: 100px;
 }
-#ipad {
-    grid-area: ipad;
-    width: 80%;
+#pic1 {
+    grid-area: pic1;
 }
-#ipad img {
+
+img {
+    max-width: 100%;
+
+}
+.photo-box {
     border: 5px solid lightgrey;
     border-radius: 10px;
-    min-width: 100%;
+    width: 200px;
+    height: 120px;
 }
-#sm_red_circle {
+#pic2 {
+    display: none;
+}
+#pic3 {
+    display: none;
+    height: 136px;
+}
+#pic4 {
+    display: none;
+}
+.sm_red_circle {
     height: 18px;
     width: 18px;
     border-radius: 200px;
     background-color: #e6563b;
     font-size: 10px;
-    grid-area: sm_red;
-
 }
-#sm_yellow_circle {
+
+.sm_yellow_circle {
     height: 18px;
     width: 18px;
     border-radius: 200px;
     background-color: #EB9D3A;
     font-size: 10px;
-    grid-area: sm_yellow;
 }
-#sm_green_circle {
+.sm_green_circle {
     height: 18px;
     width: 18px;
     border-radius: 200px;
     background-color: #7cb062;
     font-size: 10px;
-    grid-area: sm_green;
 }
-#sm_blue_circle {
+.sm_blue_circle {
     height: 18px;
     width: 18px;
     border-radius: 200px;
     background-color: #00aba9;
     font-size: 10px;
-    grid-area: sm_blue;
 }
-#featured {
+.featured {
     grid-area: featured;
     margin-top: 0;
-
 }
-#circles {
+.circles {
     grid-area: circles
+}
+
+@media screen and (min-width: 568px) {
+    main {
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas:
+                " . . . . . . . . . ."
+                " . . list list logo logo . . . ."
+                " . . . design design design design . . . "
+                " visual visual visual visual visual visual visual visual visual visual"
+                " . . park park park park park park . . "
+                " big1 big1 big1 big1 big1 big2 big2 big2 big2 big2 "
+                " . . . . selected selected . . . . "
+                " . pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 . "
+                " . pic3 pic3 pic3 pic3 pic4 pic4 pic4 pic4 . ";
+
+    }
+
+    #list {
+        margin: -90px 0 0 -40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #blog {
+        margin-left: 150px;
+    }
+
+    #logo {
+        grid-area: logo;
+    }
+    #pic2 {
+        grid-area: pic2;
+        display: inline-block;
+    }
+    #pic3 {
+        grid-area: pic3;
+        display: inline-block;
+    }
+    #pic4 {
+        grid-area: pic4;
+        display: inline-block;
+    }
+    #visual h1 {
+        margin-top: 10px;
+    }
+
+
+
 }
