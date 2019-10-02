@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.gray-bits {
+    height: 35px;
+}
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+
+
+}
+main {
+    display: grid;
+    grid-template-areas:
+        ". . . . ."
+        ". . logo . ."
+        ". design design design . "
+        ". list list list ."
+        "visual visual visual visual visual"
+        ". park park park ."
+        " . red . yellow ."
+        " . green . blue ."
+        ". . selected . ."
+        "ipad ipad ipad ipad ipad"
+        " featured featured . circles circles";
+
+}
+#banner {
+    width: 100%;
+    height: 50px;
+}
+#featured {
+    grid-area: featured;
+}
+#park {
+    grid-area: park;
+}
+#design {
+    grid-area: design;
+}
+#list {
+    grid-area: list;
+}
+#visual {
+    grid-area: visual;
+}
+#logo {
+    height: 105px;
+    width: 105px;
+    overflow: visible;
+    grid-area: grid;
+}
+#ipad {
+    border: 12px solid lightgrey;
+    border-radius: 10px;
+    grid-area: ipad
+}
+#selected {
+    grid-area: selected;
+}
+#red_circle {
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 200px;
+    background-color: #e6563b;
+    font-size: 30px;
+    grid-area: red;
+}
+#yellow_circle {
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 200px;
+    background-color: #EB9D3A;
+    font-size: 30px;
+    grid-area: yellow;
+}
+#green_circle {
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 200px;
+    background-color: #7cb062;
+    font-size: 30px;
+    grid-area: green;
+}
+#blue_circle {
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 200px;
+    background-color: #00aba9;
+    font-size: 30px;
+    grid-area: blue;
+}
+
+#sm_red_circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 200px;
+    background-color: #e6563b;
+    font-size: 10px;
+    grid-area: sm_red;
+
+}
+#sm_yellow_circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 200px;
+    background-color: #EB9D3A;
+    font-size: 10px;
+    grid-area: sm_yellow;
+}
+#sm_green_circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 200px;
+    background-color: #7cb062;
+    font-size: 10px;
+    grid-area: sm_green;
+}
+#sm_blue_circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 200px;
+    background-color: #00aba9;
+    font-size: 10px;
+    grid-area: sm_blue;
+}
+#circles {
+    grid-area: circles
+}
