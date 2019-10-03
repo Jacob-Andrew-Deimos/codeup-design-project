@@ -356,15 +356,15 @@ img {
 
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 960px) {
     main {
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas:
                 ". . . . . . . . "
                 " . design design . list list . . "
-                " . visual visual visual visual visual . . "
-                " . park park park park park . . "
-                " . wrap wrap wrap wrap wrap . . "
+                " . visual visual visual visual visual visual . "
+                " . park park park park park park . "
+                " . wrap wrap wrap wrap wrap wrap . "
                 " . hr hr hr hr hr . . "
                 " . selected selected . last last . . "
                 " . pic1 pic1 pic2 pic2 articles articles . "
@@ -374,7 +374,13 @@ img {
         margin: -70px -100px 0 0;
     }
     #logo {
-        left: 150px;
+        left: 90px;
+    }
+    #wrap {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
     }
 
 }
