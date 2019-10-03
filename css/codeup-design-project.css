@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    /*max-width: 996px;*/
 }
 body {
     font-family: 'Abel', sans-serif;
@@ -8,6 +9,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     padding-bottom: 25px;
+    position: relative;
 
 }
 .gray-bits {
@@ -28,7 +30,7 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
         ". . . . ."
-        ". . . . ."
+        ". . logo . ."
         "design design design design design "
         "list list list list list"
         "visual visual visual visual visual"
@@ -43,11 +45,15 @@ main {
 }
 #logo {
     position: absolute;
+    overflow: visible;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+}
+#logo_id {
     height: 105px;
     width: 105px;
-    overflow: visible;
-    grid-area: grid;
-    margin-top: -50px;
 }
 #design {
     grid-area: design;
@@ -84,9 +90,6 @@ hr {
     width: 100%;
     flex-wrap: wrap;
     max-width: 300px;
-}
-hr {
-    display: block;
 }
 #red_circle {
     height: 105px;
@@ -199,9 +202,9 @@ img {
 @media screen and (min-width: 576px) {
     main {
         grid-template-columns: repeat(10, 1fr);
+        max-width: 577px;
         grid-template-areas:
-                " . . . . . . . . . ."
-                " . . list list logo logo . . . ."
+                " . . . . logo logo . . . ."
                 " . . . design design design design . . . "
                 " visual visual visual visual visual visual visual visual visual visual"
                 " . . park park park park park park . . "
@@ -213,10 +216,12 @@ img {
 
     }
     #list {
-        margin: -70% 0 0 -30%;
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: center;
+        position: absolute;
+        margin-top: -63px;
+        margin-left: 25%;
     }
     #blog {
         margin-left: 150px;
@@ -227,9 +232,15 @@ img {
     #security {
         margin-top: 20px;
     }
-    #logo {
-        grid-area: logo;
-    }
+    /*#logo {*/
+    /*    grid-area: logo;*/
+    /*    max-width: 105px;*/
+    /*    max-height: 105px;*/
+    /*    overflow: visible;*/
+    /*    margin-top: -100px;*/
+    /*    position: absolute;*/
+
+    /*}*/
     #pic2 {
         grid-area: pic2;
         display: inline-block;
@@ -273,8 +284,9 @@ img {
 
     main {
         grid-template-columns: repeat(3, 1fr);
+        max-width: 769px;
         grid-template-areas:
-            " . . . "
+            " . logo . "
             " design . list "
             " visual visual visual "
             " park park park "
@@ -349,7 +361,7 @@ img {
     }
     #list {
         margin-left: -20px;
-        display: flex;
+        display: none;
         justify-content: flex-end;
         align-items: center;
         height: 95px;
@@ -363,11 +375,15 @@ img {
 /*media lg*/
 
 @media screen and (min-width: 992px) {
+    body {
+    }
     main {
         grid-template-columns: repeat(8, 1fr);
+        max-width: 992px;
+
         grid-template-areas:
-                ". . . . . . . . "
-                " . design design . list list . . "
+                ". . . logo logo . . . "
+                " . design design . list list list list "
                 " . visual visual visual visual visual visual . "
                 " . park park park park park park . "
                 " . wrap wrap wrap wrap wrap wrap . "
@@ -390,5 +406,11 @@ img {
         width: 80%;
         max-width: 600px;
     }
-
+    #list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        grid-area: list;
+        max-width: 900px;
+    }
 }
