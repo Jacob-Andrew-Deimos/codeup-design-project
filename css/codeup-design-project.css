@@ -21,7 +21,7 @@ body {
     position: absolute;
     width: 100%;
     height: 50px;
-    margin-top: 35px;
+    margin-top: 60px;
 }
 
 /*media query xs*/
@@ -147,6 +147,8 @@ hr {
 #selected {
     grid-area: selected;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 #last {
     display: none;
@@ -341,6 +343,7 @@ img {
     #list1 {
         display: flex;
         justify-content: flex-end;
+        margin-right: 20px;
     }
     #list1 li:nth-child(2) {
         margin-right: 0;
@@ -353,6 +356,11 @@ img {
         margin-left: 2%;
         max-width: 95%;
     }
+    #selected {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
     #security {
         margin-top: 0;
     }
@@ -361,6 +369,7 @@ img {
     }
     #last {
         display: flex;
+        margin-left: 20px;
         grid-area: last;
     }
     .articles {
@@ -418,12 +427,12 @@ img {
         max-width: 992px;
 
         grid-template-areas:
-                " . logo design design list list list list "
+                " . logo design design list list list2 list2 "
                 " . visual visual visual visual visual visual . "
                 " . park park park park park park . "
                 " . wrap wrap wrap wrap wrap wrap . "
                 " hr hr hr hr hr hr hr hr "
-                " . selected selected . last last . . "
+                " . selected selected . . last last . "
                 " . pic1 pic1 pic2 pic2 articles articles . "
                 " . pic3 pic3 pic4 pic4 tweet tweet . ";
     }
@@ -443,9 +452,14 @@ img {
         max-width: 900px;
     }
     #list ul {
-        margin-right: 50px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
     }
     #design {
         margin-left: 15px;
+    }
+    #last {
+        margin-left: 20px;
     }
 }
