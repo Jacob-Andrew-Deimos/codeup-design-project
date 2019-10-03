@@ -212,7 +212,12 @@ img {
     #blog {
         margin-left: 150px;
     }
-
+    #man {
+        margin-top: 20px;
+    }
+    #security {
+        margin-top: 20px;
+    }
     #logo {
         grid-area: logo;
     }
@@ -289,14 +294,39 @@ img {
         display: flex;
         max-width: 100%;
     }
+    #security {
+        margin-top: 0;
+    }
+    #man {
+        margin-top: 0;
+    }
     #last {
+        display: flex;
         grid-area: last;
     }
+    .articles {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+    }
     #articles {
+        margin-top: 30px;
         grid-area: articles;
         display: flex;
         flex-direction: column;
         margin-left: 20px;
+    }
+    #articles h5 {
+        font-family: 'Anton', sans-serif;
+    }
+    #articles img {
+        border: 1px solid lightgrey;
+    }
+    #nibbler {
+        margin-top: 10px;
+    }
+    #google {
+        margin-top: 10px;
     }
     #tweet {
         grid-area: tweet;
