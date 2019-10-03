@@ -382,8 +382,8 @@ img {
         max-width: 992px;
 
         grid-template-areas:
-                ". . . logo logo . . . "
-                " . design design . list list list list "
+                ". . . . . . . . "
+                " logo design design . list list list list "
                 " . visual visual visual visual visual visual . "
                 " . park park park park park park . "
                 " . wrap wrap wrap wrap wrap wrap . "
@@ -396,7 +396,8 @@ img {
         margin: -70px -100px 0 0;
     }
     #logo {
-        left: 90px;
+        left: -350px;
+
     }
     #wrap {
         width: 100%;
