@@ -204,7 +204,7 @@ img {
         grid-template-columns: repeat(10, 1fr);
         max-width: 577px;
         grid-template-areas:
-                " . . . . logo logo . . . ."
+                " . . . list logo logo . . . ."
                 " . . . design design design design . . . "
                 " visual visual visual visual visual visual visual visual visual visual"
                 " . . park park park park park park . . "
@@ -216,15 +216,18 @@ img {
 
     }
     #list {
-        display: none;
-        justify-content: space-between;
-        align-items: center;
+        grid-area: list;
         position: absolute;
-        margin-top: -63px;
-        margin-left: 25%;
+        top: 50px;
+        display: flex;
+    }
+    #list ul {
+        width: 70%;
+        display: flex;
+        justify-content: center;
     }
     #blog {
-        margin-left: 150px;
+        margin-left: auto;
     }
     #man {
         margin-top: 20px;
@@ -232,15 +235,6 @@ img {
     #security {
         margin-top: 20px;
     }
-    /*#logo {*/
-    /*    grid-area: logo;*/
-    /*    max-width: 105px;*/
-    /*    max-height: 105px;*/
-    /*    overflow: visible;*/
-    /*    margin-top: -100px;*/
-    /*    position: absolute;*/
-
-    /*}*/
     #pic2 {
         grid-area: pic2;
         display: inline-block;
