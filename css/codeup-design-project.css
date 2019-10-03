@@ -354,8 +354,27 @@ img {
         margin-left: 0;
     }
 
+}
 
-
-
+@media screen and (min-width: 992px) {
+    main {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+                ". . . . . . . . "
+                " . design design . list list . . "
+                " . visual visual visual visual visual . . "
+                " . park park park park park . . "
+                " . wrap wrap wrap wrap wrap . . "
+                " . hr hr hr hr hr . . "
+                " . selected selected . last last . . "
+                " . pic1 pic1 pic2 pic2 articles articles . "
+                " . pic3 pic3 pic4 pic4 tweet tweet . ";
+    }
+    #design {
+        margin: -70px -100px 0 0;
+    }
+    #logo {
+        left: 150px;
+    }
 
 }
