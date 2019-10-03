@@ -16,6 +16,7 @@ body {
     background-color: #f0f0f0;
     box-sizing: border-box;
     width: 100%;
+    padding-bottom: 25px;
 }
 main {
     width: 100vw;
@@ -176,7 +177,8 @@ img {
                 " . . . design design design design . . . "
                 " visual visual visual visual visual visual visual visual visual visual"
                 " . . park park park park park park . . "
-                " big1 big1 big1 big1 big1 big2 big2 big2 big2 big2 "
+                " wrap wrap wrap  wrap  wrap  wrap  wrap  wrap  wrap  wrap "
+                " . hr hr hr hr hr hr hr hr  ."
                 " . . . . selected selected . . . . "
                 " . pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 . "
                 " . pic3 pic3 pic3 pic3 pic4 pic4 pic4 pic4 . ";
@@ -211,7 +213,23 @@ img {
     #visual h1 {
         margin-top: 10px;
     }
+    #big-circles2 {
+        display: flex;
+        align-items: flex-end;
+        margin-left: -35px;
+    }
+    #wrap {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        grid-area: wrap;
+        padding-bottom: 1em;
+    }
+    hr {
+        grid-area: hr;
+    }
+    #selected {
+        margin-top: 0;
 
-
-
+    }
 }
