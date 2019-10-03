@@ -89,7 +89,7 @@ hr {
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    max-width: 300px;
+    max-width: 250px;
 }
 #red_circle {
     height: 105px;
@@ -274,8 +274,6 @@ img {
 
 @media screen and (min-width: 768px) {
 
-
-
     main {
         grid-template-columns: repeat(3, 1fr);
         max-width: 769px;
@@ -291,7 +289,7 @@ img {
             " pic3 pic4 tweet ";
     }
     #logo {
-        left: 30px;
+        left: -300px;
     }
     #design {
         margin: -70px -200px 0 0;
@@ -354,11 +352,15 @@ img {
         margin-right: 20px;
     }
     #list {
-        margin-left: -20px;
-        display: none;
+        display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 95px;
+    }
+    #list ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20px;
     }
     #blog {
         margin-left: 0;
@@ -386,13 +388,6 @@ img {
                 " . pic1 pic1 pic2 pic2 articles articles . "
                 " . pic3 pic3 pic4 pic4 tweet tweet . ";
     }
-    #design {
-        margin: -70px -100px 0 0;
-    }
-    #logo {
-        left: -350px;
-
-    }
     #wrap {
         width: 100%;
         margin-left: 0;
@@ -407,5 +402,8 @@ img {
         align-items: flex-start;
         grid-area: list;
         max-width: 900px;
+    }
+    #list ul {
+        margin-right: 50px;
     }
 }
