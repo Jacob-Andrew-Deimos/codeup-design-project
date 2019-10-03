@@ -12,18 +12,21 @@ body {
     position: relative;
 
 }
-.gray-bits {
-    height: 35px;
-}
 .header {
     font-family: 'Anton', sans-serif;
 }
-
+#banner {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    margin-top: 35px;
+}
 
 /*media query xs*/
 
 
 main {
+    z-index: 1;
     width: 100vw;
     margin-top: 25px;
     display: grid;
@@ -39,23 +42,19 @@ main {
         ". selected selected selected ."
         " pic1 pic1 pic1 pic1 pic1"
 }
-#banner {
-    width: 100%;
-    height: 50px;
-}
 #logo {
-    position: absolute;
-    overflow: visible;
+    z-index: 1;
     grid-area: logo;
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
+    overflow: visible;
+    width: 105px;
 }
 #logo_id {
     height: 105px;
     width: 105px;
 }
 #design {
+    display: flex;
+    justify-content: center;
     grid-area: design;
 }
 #list {
@@ -204,7 +203,7 @@ img {
         grid-template-columns: repeat(10, 1fr);
         max-width: 577px;
         grid-template-areas:
-                " . . . list logo logo . . . ."
+                " . . .  list logo logo . . . ."
                 " . . . design design design design . . . "
                 " visual visual visual visual visual visual visual visual visual visual"
                 " . . park park park park park park . . "
@@ -214,6 +213,11 @@ img {
                 " . pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 . "
                 " . pic3 pic3 pic3 pic3 pic4 pic4 pic4 pic4 . ";
 
+    }
+    #logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     #list {
         grid-area: list;
@@ -275,24 +279,30 @@ img {
 @media screen and (min-width: 768px) {
 
     main {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(9, 1fr);
         max-width: 769px;
         grid-template-areas:
-            " . logo . "
-            " design . list "
-            " visual visual visual "
-            " park park park "
-            " wrap wrap wrap "
-            " hr hr hr "
-            " selected . last "
-            " pic1 pic2 articles "
-            " pic3 pic4 tweet ";
+            " logo logo design design design . list list . "
+            " . . . . . . . . . "
+            " visual visual visual visual visual visual visual visual visual "
+            " park park park park park park park park park "
+            " wrap wrap wrap wrap wrap wrap wrap wrap wrap "
+            " hr hr hr hr hr hr hr hr hr"
+            " selected selected selected . . . last last last"
+            " pic1 pic1 pic1 pic2 pic2 pic2 articles articles articles "
+            " pic3 pic3 pic3 pic4 pic4 pic4 tweet tweet tweet ";
     }
     #logo {
-        left: -300px;
+        display: flex;
+        justify-content: center;
+        margin-left: 20px;
     }
     #design {
-        margin: -70px -200px 0 0;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
     }
     #wrap2 {
         width: 100%;
@@ -378,8 +388,7 @@ img {
         max-width: 992px;
 
         grid-template-areas:
-                ". . . . . . . . "
-                " logo design design . list list list list "
+                " . logo design design list list list list "
                 " . visual visual visual visual visual visual . "
                 " . park park park park park park . "
                 " . wrap wrap wrap wrap wrap wrap . "
@@ -405,5 +414,8 @@ img {
     }
     #list ul {
         margin-right: 50px;
+    }
+    #design {
+        margin-left: 15px;
     }
 }
