@@ -4,7 +4,6 @@
 }
 body {
     font-family: 'Abel', sans-serif;
-    margin: 10px;
     background-color: #f0f0f0;
     box-sizing: border-box;
     width: 100%;
@@ -202,6 +201,7 @@ img {
                 " . . . . selected selected . . . . "
                 " . pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 . "
                 " . pic3 pic3 pic3 pic3 pic4 pic4 pic4 pic4 . ";
+
     }
     #list {
         margin: -90px 0 0 -40px;
@@ -259,6 +259,7 @@ img {
 @media screen and (min-width: 768px) {
 
 
+
     main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
@@ -286,6 +287,7 @@ img {
     }
     hr {
         display: flex;
+        max-width: 100%;
     }
     #last {
         grid-area: last;
