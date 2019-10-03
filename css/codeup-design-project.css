@@ -10,6 +10,8 @@ body {
     width: 100%;
     padding-bottom: 25px;
     position: relative;
+    display: flex;
+    justify-content: center;
 
 }
 .header {
@@ -30,23 +32,25 @@ main {
     width: 100vw;
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
-        ". . . . ."
-        ". . logo . ."
-        "design design design design design "
-        "list list list list list"
-        "visual visual visual visual visual"
-        "park park park park park"
-        " wrap wrap wrap wrap wrap"
-        ". selected selected selected ."
-        " pic1 pic1 pic1 pic1 pic1"
+        ". . . . . ."
+        ". . logo logo . ."
+        "design design design design design design "
+        "list list list list2 list2 list2"
+        "visual visual visual visual visual visual"
+        "park park park park park park"
+        " wrap wrap wrap wrap wrap wrap"
+        ". selected selected selected selected ."
+        " pic1 pic1 pic1 pic1 pic1 pic1"
 }
 #logo {
     z-index: 1;
     grid-area: logo;
     overflow: visible;
-    width: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #logo_id {
     height: 105px;
@@ -61,8 +65,25 @@ main {
     grid-area: list;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin-left: 20px;
+}
+#list1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#list1 li:nth-child(2) {
+    margin-right: 20px;
+}
+#list2 {
+    grid-area: list2;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+
 }
 #visual {
     width: 100%;
@@ -203,13 +224,13 @@ img {
         grid-template-columns: repeat(10, 1fr);
         max-width: 577px;
         grid-template-areas:
-                " . . .  list logo logo . . . ."
-                " . . . design design design design . . . "
+                "  list list list list logo logo list2 list2 list2 list2 "
+                " . . design design design design design design . . "
                 " visual visual visual visual visual visual visual visual visual visual"
                 " . . park park park park park park . . "
                 " wrap wrap wrap  wrap  wrap  wrap  wrap  wrap  wrap  wrap "
                 " . hr hr hr hr hr hr hr hr  ."
-                " . . . . selected selected . . . . "
+                " . . . selected selected selected selected . . . "
                 " . pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 . "
                 " . pic3 pic3 pic3 pic3 pic4 pic4 pic4 pic4 . ";
 
@@ -221,18 +242,25 @@ img {
     }
     #list {
         grid-area: list;
-        position: absolute;
-        top: 50px;
+        z-index: 2;
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 18px;
+
     }
-    #list ul {
-        width: 70%;
+    #list2 {
+        grid-area: list2;
+        z-index: 2;
         display: flex;
-        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 18px;
+        margin-left: 25px;
     }
-    #blog {
-        margin-left: auto;
+    #list1 li:nth-child(2) {
+        margin-right: 50px;
     }
+
     #man {
         margin-top: 20px;
     }
@@ -282,7 +310,7 @@ img {
         grid-template-columns: repeat(9, 1fr);
         max-width: 769px;
         grid-template-areas:
-            " logo logo design design design . list list . "
+            " logo logo design design design list list list2 list2 "
             " . . . . . . . . . "
             " visual visual visual visual visual visual visual visual visual "
             " park park park park park park park park park "
@@ -303,6 +331,19 @@ img {
         justify-content: flex-start;
         align-items: center;
         margin-top: 20px;
+    }
+    #list {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    #list1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #list1 li:nth-child(2) {
+        margin-right: 0;
     }
     #wrap2 {
         width: 100%;
@@ -359,17 +400,6 @@ img {
     #tweet p {
         font-size: .75em;
         margin-top: -20px;
-        margin-right: 20px;
-    }
-    #list {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    #list ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
         margin-right: 20px;
     }
     #blog {
