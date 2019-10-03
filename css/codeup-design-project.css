@@ -276,7 +276,7 @@ img {
             " hr hr hr "
             " selected . last "
             " pic1 pic2 articles "
-            " pic3 pic4 tweet "
+            " pic3 pic4 tweet ";
     }
     #logo {
         left: 30px;
@@ -291,8 +291,8 @@ img {
         margin-top: 50px;
     }
     hr {
-        display: flex;
-        max-width: 100%;
+        margin-left: 2%;
+        max-width: 95%;
     }
     #security {
         margin-top: 0;
@@ -315,6 +315,7 @@ img {
         display: flex;
         flex-direction: column;
         margin-left: 20px;
+        margin-right: 20px;
     }
     #articles h5 {
         font-family: 'Anton', sans-serif;
@@ -330,9 +331,17 @@ img {
     }
     #tweet {
         grid-area: tweet;
-        display: flex;
+        display: block;
         margin-left: 20px;
         margin-top: 20px;
+    }
+    #tweet h6 {
+        font-size: .7em;
+    }
+    #tweet p {
+        font-size: .75em;
+        margin-top: -20px;
+        margin-right: 20px;
     }
     #list {
         margin-left: -20px;
