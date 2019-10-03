@@ -30,8 +30,7 @@ main {
         "list list list list list"
         "visual visual visual visual visual"
         "park park park park park"
-        " big1 big1 big1 big1 big1"
-        " big2 big2 big2 big2 big2"
+        " wrap wrap wrap wrap wrap"
         ". selected selected selected ."
         " pic1 pic1 pic1 pic1 pic1"
 
@@ -39,6 +38,14 @@ main {
 #banner {
     width: 100%;
     height: 50px;
+}
+#wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    grid-area: wrap;
+    flex-direction: column;
 }
 #logo {
     position: absolute;
@@ -224,6 +231,8 @@ img {
         width: 100%;
         grid-area: wrap;
         padding-bottom: 1em;
+        flex-direction: row;
+        align-items: flex-end;
     }
     hr {
         grid-area: hr;
@@ -233,3 +242,5 @@ img {
 
     }
 }
+
+@media screen ()
