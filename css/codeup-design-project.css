@@ -313,7 +313,7 @@ img {
         max-width: 769px;
         grid-template-areas:
             " logo logo design design design list list list2 list2 "
-            " . . . . . . . . . "
+            "  . . . . . . . . "
             " visual visual visual visual visual visual visual visual visual "
             " park park park park park park park park park "
             " wrap wrap wrap wrap wrap wrap wrap wrap wrap "
@@ -326,7 +326,9 @@ img {
         display: flex;
         justify-content: center;
         margin-left: 20px;
+        grid-area: logo;
     }
+
     #design {
         z-index: 2;
         display: flex;
@@ -420,30 +422,166 @@ img {
 /*media lg*/
 
 @media screen and (min-width: 992px) {
-    body {
+    #logo {
+        animation: fall 30s ease-in;
+        animation-delay: 2s;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: rotate(0);
+        }
+        1% {
+            transform: rotate(0);
+        }
+        2% {
+            transform: rotate(0);
+        }
+        3% {
+            transform: rotate(25deg);
+        }
+        4% {
+            transform: rotate(-25deg);
+        }
+        5% {
+            transform: rotate(25deg);
+        }
+        6% {
+            transform: translateY(950px);
+        }
+        7% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    #visual {
+        animation: hinge 60s ease-in;
+        animation-delay: 3.6s;
+    }
+
+    @keyframes hinge {
+        0% {
+            transform: rotate(0);
+            transform-origin: top right;
+            animation-timing-function: ease-in-out;
+        }
+        1%, 3% {
+            transform: rotate(-80deg);
+            transform-origin: top right;
+            animation-timing-function: ease-in-out;
+        }
+        2% {
+            transform: rotate(-60deg);
+            transform-origin: top right;
+            animation-timing-function: ease-in-out;
+        }
+        4% {
+            transform: rotate(-70deg) translateY(0);
+            opacity: 1;
+            transform-origin: top right;
+            animation-timing-function: ease-in-out;
+        }
+        5% {
+            transform: translateY(950px);
+        }
+        12% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: hidden;
+        }
+    }
+    #red_circle {
+        animation: fall2 60s;
+        animation-delay: 3.75s;
+    }
+
+    @keyframes fall2 {
+        0% {
+            transfrom: translateY(0);
+        }
+        2% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #yellow_circle {
+        animation: fall2 60s;
+        animation-delay: 3.8s;
+    }
+
+    @keyframes fall2 {
+        0% {
+            transfrom: translateY(0);
+        }
+        2% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #green_circle {
+        animation: fall2 60s;
+        animation-delay: 3.85s;
+    }
+
+    @keyframes fall2 {
+        0% {
+            transfrom: translateY(0);
+        }
+        2% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #blue_circle {
+        animation: fall2 60s;
+        animation-delay: 3.9s;
+    }
+
+    @keyframes fall2 {
+        0% {
+            transfrom: translateY(0);
+        }
+        2% {
+            transform: translateY(900px);
+
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
     }
     main {
         grid-template-columns: repeat(8, 1fr);
         max-width: 992px;
-
         grid-template-areas:
                 " . logo design design list list list2 list2 "
                 " . visual visual visual visual visual visual . "
                 " . park park park park park park . "
                 " . wrap wrap wrap wrap wrap wrap . "
                 " hr hr hr hr hr hr hr hr "
-                " . selected selected . . last last . "
+                " . selected selected  . . last last . "
                 " . pic1 pic1 pic2 pic2 articles articles . "
                 " . pic3 pic3 pic4 pic4 tweet tweet . ";
     }
+
     #wrap {
         width: 100%;
         margin-left: 0;
     }
+
     #wrap2 {
         width: 80%;
         max-width: 600px;
     }
+
     #list {
         display: flex;
         justify-content: flex-end;
@@ -451,14 +589,17 @@ img {
         grid-area: list;
         max-width: 900px;
     }
+
     #list ul {
         margin-right: 20px;
         display: flex;
         justify-content: flex-end;
     }
+
     #design {
         margin-left: 15px;
     }
+
     #last {
         margin-left: 20px;
     }
