@@ -7,6 +7,7 @@
         background-color: #f0f0f0;
         box-sizing: border-box;
         width: 100%;
+        min-width: 250px;
         padding-bottom: 25px;
         position: relative;
         display: flex;
@@ -23,12 +24,11 @@
     }
 
 
-/*-----------------------media query xs-----------------------*/
+/*-----------------------EXTRA SMALL media query-----------------------*/
 
 
     main {
         z-index: 1;
-        width: 100vw;
         margin-top: 25px;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -46,14 +46,13 @@
     #logo {
         z-index: 1;
         grid-area: logo;
-        overflow: visible;
         width: 100%;
         display: flex;
         justify-content: center;
     }
     #logo_id {
         height: 105px;
-        width: 105px;
+        max-width: 105px;
     }
     #design {
         display: flex;
@@ -211,7 +210,7 @@
     }
 
 
-/*-----------------------media query sm-----------------------*/
+/*-----------------------SMALL media query-----------------------*/
 
 
 @media screen and (min-width: 576px) {
@@ -293,7 +292,7 @@
 }
 
 
-/*-----------------------media query md-----------------------*/
+/*-----------------------MEDIUM media query-----------------------*/
 
 
 @media screen and (min-width: 768px) {
@@ -407,7 +406,7 @@
 }
 
 
-/*-----------------------media query lg-----------------------*/
+/*-----------------------LARGE media query-----------------------*/
 
 
 @media screen and (min-width: 992px) {
@@ -462,7 +461,7 @@
     }
     @keyframes fall {
         0% {
-            transform: rotate(8);
+            transform: rotate(0);
         }
         1% {
             transform: rotate(0);
@@ -556,7 +555,7 @@
     }
     @keyframes fall2 {
         0% {
-            transfrom: translateY(0);
+            transform: translateY(0);
         }
         2% {
             transform: translateY(900px);
@@ -571,7 +570,7 @@
     }
     @keyframes fall2 {
         0% {
-            transfrom: translateY(0);
+            transform: translateY(0);
         }
         2% {
             transform: translateY(900px);
@@ -586,7 +585,7 @@
     }
     @keyframes fall2 {
         0% {
-            transfrom: translateY(0);
+            transform: translateY(0);
         }
         2% {
             transform: translateY(900px);
