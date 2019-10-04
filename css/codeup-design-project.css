@@ -456,7 +456,7 @@
 
 
     #logo_id {
-        animation: fall 30s ease-in;
+        animation: fall 30s ease-in-out;
         animation-delay: 2s;
     }
     @keyframes fall {
@@ -503,8 +503,8 @@
             transform-origin: top right;
             animation-timing-function: ease-in-out;
         }
-        2%, 6% {
-            transform: rotate(-80deg);
+        2% {
+            transform: rotate(-120deg);
             transform-origin: top right;
             animation-timing-function: ease-in-out;
         }
@@ -513,8 +513,13 @@
             transform-origin: top right;
             animation-timing-function: ease-in-out;
         }
+        6% {
+            transform: rotate(-110deg);
+            transform-origin: top right;
+            animation-timing-function: ease-in-out;
+        }
         8% {
-            transform: rotate(-70deg) translateY(0);
+            transform: rotate(-80deg) translateY(0);
             opacity: 1;
             transform-origin: top right;
             animation-timing-function: ease-in-out;
@@ -588,6 +593,263 @@
             transform: translateY(0);
         }
         2% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+/*--------------------TRICKLE animation--------------------*/
+    #a {
+        animation: james 30s;
+        animation-delay: 6.5s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #i {
+        animation: james 30s;
+        animation-delay: 6.6s;
+
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #g {
+        animation: james 30s;
+        animation-delay: 6.7s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #n {
+        animation: james 30s;
+        animation-delay: 6.8s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #f {
+        animation: james 30s;
+        animation-delay: 6.9s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #c {
+         animation: james 30s;
+         animation-delay: 7s;
+     }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #k {
+        animation: james 30s;
+        animation-delay: 7.1s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #o {
+        animation: james 30s;
+        animation-delay: 7.2s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #d {
+        animation: james 30s;
+        animation-delay: 7.3s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #m {
+        animation: james 30s;
+        animation-delay: 7.4s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #l {
+        animation: james 30s;
+        animation-delay: 6.75s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #e {
+        animation: james 30s;
+        animation-delay: 6.85s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #j {
+        animation: james 30s;
+        animation-delay: 6.95s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #q {
+        animation: james 30s;
+        animation-delay: 7.05s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #p {
+        animation: james 30s;
+        animation-delay: 7.15s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #b {
+        animation: james 30s;
+        animation-delay: 7.25s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
+            transform: translateY(900px);
+        }
+        3%, 100% {
+            visibility: hidden;
+        }
+    }
+    #h {
+        animation: james 30s;
+        animation-delay: 7.35s;
+    }
+    @keyframes james {
+        0% {
+            transform: translateY(0);
+        }
+        3% {
             transform: translateY(900px);
         }
         3%, 100% {
